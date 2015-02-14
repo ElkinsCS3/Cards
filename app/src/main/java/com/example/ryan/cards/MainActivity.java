@@ -17,8 +17,8 @@ import java.util.*;
 public class MainActivity extends ActionBarActivity
 {
     Button card01,card02,card03,card04,card05,card06,card07,card08,card09,card10,card11,card12,card13,card14,card15,card16,card17,card18,card19,card20,card21,card22,card23,card24,card25,card26;
-    Button scard01,scard02,scard03,scard04,scard05,scard06,scard07,scard08,scard09,scard10,scard11,scard12,scard13,scard14,scard15,scard16,scard17,scard18,scard19,scard20,scard21,scard22,scard23,scard24,scard25,scard26;
-    Button rcard01,rcard02,rcard03,rcard04,rcard05,rcard06,rcard07,rcard08,rcard09,rcard10,rcard11,rcard12,rcard13,rcard14,rcard15,rcard16,rcard17,rcard18,rcard19,rcard20,rcard21,rcard22,rcard23,rcard24,rcard25,rcard26;
+    Button scard01,scard02,scard03,scard04,scard05;
+    Button rcard01,rcard02,rcard03,rcard04,rcard05;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
