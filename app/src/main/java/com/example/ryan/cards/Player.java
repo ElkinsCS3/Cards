@@ -7,12 +7,12 @@ import java.util.ArrayList;
  */
 public class Player
 {
-    ArrayList<String> currentCards;
-    public Player(ArrayList<String> input)
+    static String[] currentCards;
+    public Player(String[] input)
     {
         currentCards = input;
     }
-    public static Player getInstance() {
-        return 0;
+    public static String[] getCurrentCards() {
+        return currentCards;
     }
 }
