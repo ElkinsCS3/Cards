@@ -9,8 +9,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
+        android:text="Throw"
+        android:id="@+id/throwCard"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -19,17 +19,17 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
+        android:text="Get Card"
+        android:id="@+id/getCard"
+        android:layout_below="@+id/throwCard"
+        android:layout_alignRight="@+id/throwCard"
+        android:layout_alignEnd="@+id/throwCard" />
 
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/horizontalScrollView"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/getCard"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -41,7 +41,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card01"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
@@ -50,7 +50,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card02"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card01"
@@ -58,7 +58,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card03"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card02"
@@ -66,7 +66,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card04"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card03"
@@ -74,7 +74,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card05"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card04"
@@ -82,7 +82,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card06"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card05"
@@ -90,7 +90,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card07"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card06"
@@ -98,7 +98,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card08"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card07"
@@ -106,7 +106,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card09"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card08"
@@ -114,7 +114,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card10"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card09"
@@ -122,7 +122,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card11"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card10"
@@ -130,7 +130,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card12"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card11"
@@ -138,7 +138,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card13"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card12"
@@ -146,7 +146,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card14"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card13"
@@ -154,7 +154,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card15"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card14"
@@ -162,7 +162,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card16"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card15"
@@ -170,7 +170,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card17"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card16"
@@ -178,10 +178,74 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Card"
                 android:id="@+id/Card18"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/Card17"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/Card19"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card18"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/Card20"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card19"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/Card21"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card20"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/Card22"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card21"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/Card23"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card22"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/Card24"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card23"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/Card25"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card24"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/Card26"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card25"
                 android:layout_alignParentTop="true" />
         </RelativeLayout>
     </HorizontalScrollView>
