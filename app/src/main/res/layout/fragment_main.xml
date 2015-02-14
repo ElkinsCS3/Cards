@@ -9,8 +9,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Throw"
-        android:id="@+id/throwCard"
+        android:text="Done"
+        android:id="@+id/done"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -21,9 +21,9 @@
         android:layout_height="wrap_content"
         android:text="Get Card"
         android:id="@+id/getCard"
-        android:layout_below="@+id/throwCard"
-        android:layout_alignRight="@+id/throwCard"
-        android:layout_alignEnd="@+id/throwCard" />
+        android:layout_below="@+id/done"
+        android:layout_alignRight="@+id/done"
+        android:layout_alignEnd="@+id/done" />
 
     <HorizontalScrollView
         android:layout_width="wrap_content"
@@ -250,6 +250,31 @@
         </RelativeLayout>
     </HorizontalScrollView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cards Left"
+        android:id="@+id/cardsLeft"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView2"
+        android:layout_above="@+id/horizontalScrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/done"
+        android:layout_toLeftOf="@+id/getCard"
+        android:layout_toStartOf="@+id/getCard">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            
+        </RelativeLayout>
+    </HorizontalScrollView>
 
 </RelativeLayout>
