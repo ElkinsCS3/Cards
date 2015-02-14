@@ -6,7 +6,186 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity$PlaceholderFragment">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="65dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card01"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card02"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card01"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card03"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card02"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card04"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card03"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card05"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card04"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card06"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card05"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card07"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card06"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card08"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card07"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card09"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card08"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card10"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card09"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card11"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card10"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card12"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card11"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card13"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card12"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card14"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card13"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card15"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card14"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card16"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card15"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card17"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card16"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/Card18"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/Card17"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+
 
 </RelativeLayout>
