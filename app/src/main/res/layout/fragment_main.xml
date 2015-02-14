@@ -11,10 +11,10 @@
         android:layout_height="wrap_content"
         android:text="Done"
         android:id="@+id/done"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="73dp"
+        android:layout_below="@+id/cardsLeft"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="65dp" />
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -273,8 +273,102 @@
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-            
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/sCard01"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/sCard02"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/sCard01"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/sCard03"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/sCard02"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/sCard04"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/sCard03"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/sCard05"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/sCard04"
+                android:layout_alignParentTop="true" />
         </RelativeLayout>
     </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView3"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/cardsLeft"
+        android:layout_above="@+id/horizontalScrollView2"
+        android:layout_toLeftOf="@+id/done"
+        android:layout_toStartOf="@+id/done">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/rCard01"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/rCard02"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/rCard01"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/rCard03"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/rCard02"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/rCard04"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/rCard03"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:id="@+id/rCard05"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/rCard04"
+                android:layout_alignParentTop="true" />
+            </RelativeLayout>
+        </HorizontalScrollView>
 
 </RelativeLayout>
