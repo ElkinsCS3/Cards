@@ -14,6 +14,7 @@ public class Player
     {
         currentCards = input;
         amt = input.length;
+        amt=0;
     }
 
     public Card[] getCurrentCards()
@@ -30,8 +31,9 @@ public class Player
 
     public void remove(int in)
     {
-        currentCards[in] = null;
-        amt--;
+        currentCards[in] = new Card(0,0);
+        if(amt>0)
+            amt--;
         sort();
     }
 

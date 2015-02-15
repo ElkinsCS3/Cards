@@ -21,20 +21,22 @@ public class MainActivity extends ActionBarActivity
     Button card01,card02,card03,card04,card05,card06,card07,card08,card09,card10,card11,card12,card13,card14,card15,card16,card17,card18,card19,card20,card21,card22,card23,card24,card25,card26;
     Button scard01,scard02,scard03,scard04,scard05;
     Button rcard01,rcard02,rcard03,rcard04,rcard05;
-    Button getCard;
+    Button getCard,reset;
     Card[] handCards = new Card[26];
     Card[] selected = new Card[5];
     ArrayList<Card> available;
     Player player1;
     Player player2;
+    TextView cardsLeft;
     int currentPlayer,selectedC;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_main);
-        currentPlayer = 1;
+        currentPlayer = 1;selectedC=0;
         available = new ArrayList<Card>();
+        cardsLeft = (TextView)findViewById(R.id.cardsLeft);
         reset();
         /*if (savedInstanceState == null)
         {
@@ -43,6 +45,7 @@ public class MainActivity extends ActionBarActivity
                     .commit();
         }*/
         getCard = (Button)findViewById(R.id.get);
+        reset = (Button)findViewById(R.id.reset);
         card01 = (Button)findViewById(R.id.Card01);
         card02 = (Button)findViewById(R.id.Card02);
         card03 = (Button)findViewById(R.id.Card03);
@@ -69,35 +72,50 @@ public class MainActivity extends ActionBarActivity
         card24 = (Button)findViewById(R.id.Card24);
         card25 = (Button)findViewById(R.id.Card25);
         card26 = (Button)findViewById(R.id.Card26);
+
         sync();
 
         getCard.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int ran = (int)Math.random()*52;
+                int ran = (int)(Math.random()*available.size());
                 if(currentPlayer ==1)
                 {
                     player1.addCard(available.get(ran));
                     sync();
-                    available.remove(available.get(ran));
+                    int index = available.indexOf(available.get(ran));
+                    available.remove(index);
+                    cardsLeft.setText(available.size()+" Cards Left");
                 }
+            }
+        });
+
+        reset.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reset();
+                sync();
             }
         });
 
         card01.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(currentPlayer == 1)
+                if(currentPlayer == 1 && selectedC<6)
                 {
                     handCards=player1.getCurrentCards();
                     selected[selectedC]=handCards[0];
+                    selectedC++;
                     player1.remove(0);
+                    sync();
                 }
-                else if(currentPlayer == 2)
+                else if(currentPlayer == 2 && selectedC<6)
                 {
                     handCards=player2.getCurrentCards();
                     selected[selectedC]=handCards[0];
+                    selectedC++;
                     player2.remove(0);
+                    sync();
                 }
             }
         });
@@ -138,6 +156,7 @@ public class MainActivity extends ActionBarActivity
         {
             selected[i]=new Card(0,0);
         }
+        available = new ArrayList<Card>();
         for(int i=1;i<=13;i++)
         {
             for(int j=1;j<=4;j++)
@@ -145,6 +164,7 @@ public class MainActivity extends ActionBarActivity
                 available.add(new Card(i,j));
             }
         }
+        cardsLeft.setText(available.size()+ " Cards Left");
         for(int i=0;i<5;i++)
         {
             selected[i]=new Card(0, 0);
