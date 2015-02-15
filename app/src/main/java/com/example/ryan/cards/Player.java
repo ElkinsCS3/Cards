@@ -7,12 +7,28 @@ import java.util.ArrayList;
  */
 public class Player
 {
-    static String[] currentCards;
-    public Player(String[] input)
+    Card[] currentCards;
+    int amt;
+
+    public Player(Card[] input)
     {
         currentCards = input;
+        amt = input.length;
     }
-    public static String[] getCurrentCards() {
+
+    public Card[] getCurrentCards()
+    {
         return currentCards;
     }
+
+    public void addCard(Card in)
+    {
+        if(amt < 54) {
+            currentCards[amt] = in;
+            amt++;
+        }
+
+    }
+
+
 }
