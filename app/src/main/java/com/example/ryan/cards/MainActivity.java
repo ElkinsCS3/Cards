@@ -158,7 +158,7 @@ public class MainActivity extends ActionBarActivity
                 else if(currentPlayer == 4)
                 {
                     currentPlayer=1;
-                    cp.setText("Player 2");
+                    cp.setText("Player 1");
                     sync();
                 }
             }
