@@ -13,6 +13,8 @@ import android.widget.*;
 
 import java.util.*;
 
+import static android.view.View.OnClickListener;
+
 
 public class MainActivity extends ActionBarActivity
 {
@@ -30,30 +32,32 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_main);
         currentPlayer = 1;
-        reset();
         available = new ArrayList<Card>();
-        if (savedInstanceState == null)
+        reset();
+        /*if (savedInstanceState == null)
         {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
-        }
-        getCard = (Button)findViewById(R.id.getCard);
-        getCard.setOnClickListener(new View.OnClickListener() {
+        }*/
+        sync();
+        getCard = (Button)findViewById(R.id.get);
+        getCard.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 int ran = (int)Math.random()*52;
                 if(currentPlayer ==1)
                 {
                     player1.addCard(available.get(ran));
+                    sync();
                     available.remove(available.get(ran));
                 }
             }
         });
         card01 = (Button)findViewById(R.id.Card01);
-        card01.setOnClickListener(new View.OnClickListener() {
+        card01.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(currentPlayer == 1)
