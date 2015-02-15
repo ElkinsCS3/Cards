@@ -20,11 +20,17 @@ public class MainActivity extends ActionBarActivity
     Button scard01,scard02,scard03,scard04,scard05;
     Button rcard01,rcard02,rcard03,rcard04,rcard05;
     Card[] handCards = new Card[26];
+    Card[] selected = new Card[5];
+    Player player1;
+    Player player2;
+    int currentPlayer,selectedC;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        currentPlayer = 1;
+        reset();
         if (savedInstanceState == null)
         {
             getSupportFragmentManager().beginTransaction()
@@ -35,13 +41,24 @@ public class MainActivity extends ActionBarActivity
         card01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if(currentPlayer == 1)
+                {
+                    handCards=player1.getCurrentCards();
+                    selected[selectedC]=handCards[0];
+                    player1.remove(0);
+                }
+                else if(currentPlayer == 2)
+                {
+                    handCards=player2.getCurrentCards();
+                    selected[selectedC]=handCards[0];
+                    player2.remove(0);
+                }
             }
         });
     }
     public void initialize()
     {
-        handCards[0]=new Card(card01.getText().toString());
+        /*handCards[0]=new Card(card01.getText().toString());
         handCards[1]=new Card(card02.getText().toString());
         handCards[2]=new Card(card03.getText().toString());
         handCards[3]=new Card(card04.getText().toString());
@@ -66,7 +83,84 @@ public class MainActivity extends ActionBarActivity
         handCards[22]=new Card(card23.getText().toString());
         handCards[23]=new Card(card24.getText().toString());
         handCards[24]=new Card(card25.getText().toString());
-        handCards[25]=new Card(card26.getText().toString());
+        handCards[25]=new Card(card26.getText().toString());*/
+        for(int i=0;i<26;i++)
+        {
+            handCards[i]=new Card("Empty");
+        }
+        for(int i=0;i<5;i++)
+        {
+            selected[i]=new Card("Empty");
+        }
+    }
+    public void reset()
+    {
+        initialize();
+        player1 = new Player(handCards);
+        player2 = new Player(handCards);
+    }
+    public void sync()
+    {
+        if(currentPlayer==1)
+        {
+            handCards=player1.getCurrentCards();
+            card01.setText(handCards[0].toString());
+            card02.setText(handCards[1].toString());
+            card03.setText(handCards[2].toString());
+            card04.setText(handCards[3].toString());
+            card05.setText(handCards[4].toString());
+            card06.setText(handCards[5].toString());
+            card07.setText(handCards[6].toString());
+            card08.setText(handCards[7].toString());
+            card09.setText(handCards[8].toString());
+            card10.setText(handCards[9].toString());
+            card11.setText(handCards[10].toString());
+            card12.setText(handCards[11].toString());
+            card13.setText(handCards[12].toString());
+            card14.setText(handCards[13].toString());
+            card15.setText(handCards[14].toString());
+            card16.setText(handCards[15].toString());
+            card17.setText(handCards[16].toString());
+            card18.setText(handCards[17].toString());
+            card19.setText(handCards[18].toString());
+            card20.setText(handCards[19].toString());
+            card21.setText(handCards[20].toString());
+            card22.setText(handCards[21].toString());
+            card23.setText(handCards[22].toString());
+            card24.setText(handCards[23].toString());
+            card25.setText(handCards[24].toString());
+            card26.setText(handCards[25].toString());
+        }
+        else if(currentPlayer == 2)
+        {
+            handCards=player2.getCurrentCards();
+            card01.setText(handCards[0].toString());
+            card02.setText(handCards[1].toString());
+            card03.setText(handCards[2].toString());
+            card04.setText(handCards[3].toString());
+            card05.setText(handCards[4].toString());
+            card06.setText(handCards[5].toString());
+            card07.setText(handCards[6].toString());
+            card08.setText(handCards[7].toString());
+            card09.setText(handCards[8].toString());
+            card10.setText(handCards[9].toString());
+            card11.setText(handCards[10].toString());
+            card12.setText(handCards[11].toString());
+            card13.setText(handCards[12].toString());
+            card14.setText(handCards[13].toString());
+            card15.setText(handCards[14].toString());
+            card16.setText(handCards[15].toString());
+            card17.setText(handCards[16].toString());
+            card18.setText(handCards[17].toString());
+            card19.setText(handCards[18].toString());
+            card20.setText(handCards[19].toString());
+            card21.setText(handCards[20].toString());
+            card22.setText(handCards[21].toString());
+            card23.setText(handCards[22].toString());
+            card24.setText(handCards[23].toString());
+            card25.setText(handCards[24].toString());
+            card26.setText(handCards[25].toString());
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
