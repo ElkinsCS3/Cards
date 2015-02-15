@@ -33,19 +33,9 @@ public class Player
         }
     }
 
-    public void remove(Card in)
+    public void remove(int in)
     {
-        for(int i = 0; i < currentCards.length; i++)
-        {
-            if(currentCards[i].equals(in))
-            {
-                for (int j = i; j < currentCards.length - 1; j++)
-                {
-                    currentCards[j] = currentCards[j + 1];
-                }
-                currentCards[j] = null;
-            }
-        }
+        currentCards[in] = null;
     }
 
 }
