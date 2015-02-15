@@ -22,11 +22,16 @@ public class Player
         return currentCards;
     }
 
-    public void addCard(Card in)
+    public boolean addCard(Card in)
     {
-        currentCards[amt] = in;
-        amt++;
-        sort();
+        if(amt<currentCards.length)
+        {
+            currentCards[amt] = in;
+            amt++;
+            sort();
+            return true;
+        }
+        return false;
     }
 
     public void remove(int in)

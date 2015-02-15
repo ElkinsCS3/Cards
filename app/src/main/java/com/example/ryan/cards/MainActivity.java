@@ -92,26 +92,35 @@ public class MainActivity extends ActionBarActivity
             @Override
             public void onClick(View v) {
                 int ran = (int)(Math.random()*available.size());
-                if(currentPlayer ==1)
+                if(available.size()!=0)
                 {
-                    player1.addCard(available.get(ran));
-                    sync();
-                    int index = available.indexOf(available.get(ran));
-                    if(available.size()>0)
-                        available.remove(index);
-                    else
-                        cp.setText("No Cards Left");
+                    if(currentPlayer ==1)
+                    {
+                        if(player1.addCard(available.get(ran)))
+                        {
+                            sync();
+                            int index = available.indexOf(available.get(ran));
+                            if(available.size()>0)
+                                available.remove(index);
+                            else
+                                cp.setText("No Cards Left");
+                        }
+                    }
+                    else if(currentPlayer ==2)
+                    {
+                        if(player2.addCard(available.get(ran)))
+                        {
+                            sync();
+                            int index = available.indexOf(available.get(ran));
+                            if (available.size() > 0)
+                                available.remove(index);
+                            else
+                                cp.setText("No Cards Left");
+                        }
+                    }
                 }
-                else if(currentPlayer ==2)
-                {
-                    player2.addCard(available.get(ran));
-                    sync();
-                    int index = available.indexOf(available.get(ran));
-                    if(available.size()>0)
-                        available.remove(index);
-                    else
-                        cp.setText("No Cards Left");
-                }
+                else
+                    cp.setText("No Cards Left");
             }
         });
 
