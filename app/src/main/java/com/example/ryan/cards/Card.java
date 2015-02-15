@@ -32,6 +32,8 @@ public class Card implements Comparable<Card>
 
     public String toString()
     {
+        if(rank == 0 || suit == 0)
+            return "Empty";
         String output = "";
         switch (rank)
         {
