@@ -24,12 +24,14 @@ public class Player
     public void addCard(Card in)
     {
         currentCards[amt] = in;
+        amt++;
         sort();
     }
 
     public void remove(int in)
     {
         currentCards[in] = null;
+        amt--;
         sort();
     }
 
