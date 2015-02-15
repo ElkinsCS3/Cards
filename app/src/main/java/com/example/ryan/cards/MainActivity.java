@@ -86,11 +86,11 @@ public class MainActivity extends ActionBarActivity
         handCards[25]=new Card(card26.getText().toString());*/
         for(int i=0;i<26;i++)
         {
-            handCards[i]=new Card("Empty");
+            handCards[i]=new Card(0, 0);
         }
         for(int i=0;i<5;i++)
         {
-            selected[i]=new Card("Empty");
+            selected[i]=new Card(0, 0);
         }
     }
     public void reset()
