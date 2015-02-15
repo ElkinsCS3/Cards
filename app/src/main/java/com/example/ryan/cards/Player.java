@@ -23,12 +23,29 @@ public class Player
 
     public void addCard(Card in)
     {
-        for(int i = 0; i < amt; i++)
-        {
-            if(in.getSuit() < currentCards[i].getSuit())
+        for(int i = 0; i < amt; i++) {
+            if (in.getSuit() > currentCards[i].getSuit())
                 continue;
+            else if (in.getSuit() <= currentCards[i].getSuit()) {
+                currentCards.add(i, in);
+                return;
+            }
         }
     }
 
+    public void remove(Card in)
+    {
+        for(int i = 0; i < currentCards.length; i++)
+        {
+            if(currentCards[i].equals(in))
+            {
+                for (int j = i; j < currentCards.length - 1; j++)
+                {
+                    currentCards[j] = currentCards[j + 1];
+                }
+                currentCards[j] = null;
+            }
+        }
+    }
 
 }
