@@ -42,8 +42,35 @@ public class MainActivity extends ActionBarActivity
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }*/
-        sync();
         getCard = (Button)findViewById(R.id.get);
+        card01 = (Button)findViewById(R.id.Card01);
+        card02 = (Button)findViewById(R.id.Card02);
+        card03 = (Button)findViewById(R.id.Card03);
+        card04 = (Button)findViewById(R.id.Card04);
+        card05 = (Button)findViewById(R.id.Card05);
+        card06 = (Button)findViewById(R.id.Card06);
+        card07 = (Button)findViewById(R.id.Card07);
+        card08 = (Button)findViewById(R.id.Card08);
+        card09 = (Button)findViewById(R.id.Card09);
+        card10 = (Button)findViewById(R.id.Card10);
+        card11 = (Button)findViewById(R.id.Card11);
+        card12 = (Button)findViewById(R.id.Card12);
+        card13 = (Button)findViewById(R.id.Card13);
+        card14 = (Button)findViewById(R.id.Card14);
+        card15 = (Button)findViewById(R.id.Card15);
+        card16 = (Button)findViewById(R.id.Card16);
+        card17 = (Button)findViewById(R.id.Card17);
+        card18 = (Button)findViewById(R.id.Card18);
+        card19 = (Button)findViewById(R.id.Card19);
+        card20 = (Button)findViewById(R.id.Card20);
+        card21 = (Button)findViewById(R.id.Card21);
+        card22 = (Button)findViewById(R.id.Card22);
+        card23 = (Button)findViewById(R.id.Card23);
+        card24 = (Button)findViewById(R.id.Card24);
+        card25 = (Button)findViewById(R.id.Card25);
+        card26 = (Button)findViewById(R.id.Card26);
+        sync();
+
         getCard.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +83,7 @@ public class MainActivity extends ActionBarActivity
                 }
             }
         });
-        card01 = (Button)findViewById(R.id.Card01);
+
         card01.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
