@@ -33,13 +33,15 @@ public class Player
     {
         currentCards[in] = new Card(0,0);
         if(amt>0)
+        {
             amt--;
+        }
         sort();
     }
 
     public void sort()
     {
-        int n = currentCards.length;
+        int n = 26;
         Card temp = null;
 
         for(int i=0; i < n; i++){

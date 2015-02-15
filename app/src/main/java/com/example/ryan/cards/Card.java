@@ -65,8 +65,11 @@ public class Card implements Comparable<Card>
 
     @Override
     public int compareTo(Card another) {
-        if (another.getSuit()==0) return -1;
-        if(rank < another.getRank())
+        if (another.getSuit()==0)
+            return -1;
+        else if(suit==0)
+            return 1;
+        else if(rank < another.getRank())
         {
             return -1;
         }
@@ -78,11 +81,11 @@ public class Card implements Comparable<Card>
         {
             if(suit < another.getSuit())
             {
-                return -1;
+                return 1;
             }
             else if(suit > another.getSuit())
             {
-                return 1;
+                return -1;
             }
         }
         return 0;

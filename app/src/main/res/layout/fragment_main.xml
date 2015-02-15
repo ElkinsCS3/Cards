@@ -253,8 +253,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="52 Cards Left"
-        android:id="@+id/cardsLeft"
+        android:text="Player 1"
+        android:id="@+id/cp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -372,10 +372,10 @@
         android:layout_height="wrap_content"
         android:text="Reset"
         android:id="@+id/reset"
-        android:layout_below="@+id/cardsLeft"
+        android:layout_below="@+id/cp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/cardsLeft"
-        android:layout_alignEnd="@+id/cardsLeft" />
+        android:layout_toLeftOf="@+id/horizontalScrollView3"
+        android:layout_toStartOf="@+id/horizontalScrollView3" />
 
 </RelativeLayout>
