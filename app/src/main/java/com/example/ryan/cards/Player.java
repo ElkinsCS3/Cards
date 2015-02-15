@@ -43,7 +43,7 @@ public class Player
         for(int i=0; i < n; i++){
             for(int j=1; j < (n-i); j++){
 
-                if(currentCards[j-1].compareTo(currentCards[j]) > 0){
+                if(currentCards[j-1]!=null && currentCards[j-1].compareTo(currentCards[j]) > 0){
                     //swap the elements!
                     temp = currentCards[j-1];
                     currentCards[j-1] = currentCards[j];
