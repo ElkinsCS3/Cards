@@ -19,8 +19,10 @@ public class MainActivity extends ActionBarActivity
     Button card01,card02,card03,card04,card05,card06,card07,card08,card09,card10,card11,card12,card13,card14,card15,card16,card17,card18,card19,card20,card21,card22,card23,card24,card25,card26;
     Button scard01,scard02,scard03,scard04,scard05;
     Button rcard01,rcard02,rcard03,rcard04,rcard05;
+    Button getCard;
     Card[] handCards = new Card[26];
     Card[] selected = new Card[5];
+    ArrayList<Card> available;
     Player player1;
     Player player2;
     int currentPlayer,selectedC;
@@ -31,12 +33,25 @@ public class MainActivity extends ActionBarActivity
         setContentView(R.layout.activity_main);
         currentPlayer = 1;
         reset();
+        available = new ArrayList<Card>();
         if (savedInstanceState == null)
         {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        getCard = (Button)findViewById(R.id.getCard);
+        getCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int ran = (int)Math.random()*52;
+                if(currentPlayer ==1)
+                {
+                    player1.addCard(available.get(ran));
+                    available.remove(available.get(ran));
+                }
+            }
+        });
         card01 = (Button)findViewById(R.id.Card01);
         card01.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,11 +101,18 @@ public class MainActivity extends ActionBarActivity
         handCards[25]=new Card(card26.getText().toString());*/
         for(int i=0;i<26;i++)
         {
-            handCards[i]=new Card("Empty");
+            handCards[i]=new Card(0,0);
         }
         for(int i=0;i<5;i++)
         {
-            selected[i]=new Card("Empty");
+            selected[i]=new Card(0,0);
+        }
+        for(int i=1;i<=13;i++)
+        {
+            for(int j=1;j<=4;j++)
+            {
+                available.add(new Card(i,j));
+            }
         }
     }
     public void reset()
