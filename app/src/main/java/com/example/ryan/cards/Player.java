@@ -23,11 +23,11 @@ public class Player
 
     public void addCard(Card in)
     {
-        if(amt < 54) {
-            currentCards[amt] = in;
-            amt++;
+        for(int i = 0; i < amt; i++)
+        {
+            if(in.getSuit() < currentCards[i].getSuit())
+                continue;
         }
-
     }
 
 

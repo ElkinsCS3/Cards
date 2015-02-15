@@ -19,4 +19,14 @@ public class Card
         rank = r;
         suit = s;
     }
+
+    public int getSuit()
+    {
+        return suit;
+    }
+
+    public int getRank()
+    {
+        return rank;
+    }
 }
