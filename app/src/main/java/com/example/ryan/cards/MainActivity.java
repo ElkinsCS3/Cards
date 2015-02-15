@@ -114,6 +114,11 @@ public class MainActivity extends ActionBarActivity
                 available.add(new Card(i,j));
             }
         }
+        for(int i=0;i<5;i++)
+        {
+            selected[i]=new Card(0, 0);
+
+        }
     }
     public void reset()
     {

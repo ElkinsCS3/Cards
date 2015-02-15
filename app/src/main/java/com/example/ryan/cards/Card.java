@@ -3,7 +3,7 @@ package com.example.ryan.cards;
 /**
  * Created by coop on 2/14/2015.
  */
-public class Card
+public class Card implements Comparable<Card>
 {
     private int rank;
     /*
@@ -61,4 +61,27 @@ public class Card
         return output;
     }
 
+    @Override
+    public int compareTo(Card another) {
+        if(rank < another.getRank())
+        {
+            return -1;
+        }
+        else if(rank > another.getRank())
+        {
+            return 1;
+        }
+        else
+        {
+            if(suit < another.getSuit())
+            {
+                return -1;
+            }
+            else if(suit > another.getSuit())
+            {
+                return 1;
+            }
+        }
+        return 0;
+    }
 }
