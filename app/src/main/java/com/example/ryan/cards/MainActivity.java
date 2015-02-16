@@ -24,8 +24,8 @@ public class MainActivity extends ActionBarActivity
     Button getCard,reset,done;
     Card[] handCards = new Card[26];
     Card[] selected = new Card[5];
-    Card[] recent = new Card[5];
     ArrayList<Card> available;
+    Card[] recent = new Card[5];
     Player player1;
     Player player2;
     Player player3;
